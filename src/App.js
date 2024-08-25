@@ -9,7 +9,7 @@ function App() {
       <div className="App">
         <Navbar/>
         <main>
-          <h1>City</h1>
+          <h1>London</h1>
           <section className="current-weather-time">
             <CurrentTime/>
             <CurrentWeather/>

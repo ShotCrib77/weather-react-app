@@ -13,7 +13,7 @@ async function getTimeByTimezone(timezone) {
 }
 
 function CurrentTime() {
-  const timezone = 'Europe/London';
+  const timezone = "Europe/London";
   const [timeData, setTimeData] = useState(null);
   const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -39,12 +39,15 @@ function CurrentTime() {
   if (!timeData) {
     return <div>Loading time data...</div>;
   }
-  const formattedDate = currentDate.toLocaleDateString("en-US", {
+  const formattedDate = currentDate.toLocaleDateString("en-GB", {
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
+    timeZone: timezone
   });
   
-  const current_time = currentDate.toLocaleTimeString()
+  const current_time = currentDate.toLocaleTimeString("en-GB", {
+    timeZone: timezone
+  });
 
   return (
     <section className="current-time">
