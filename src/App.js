@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import logoImage from "./images/logo.png";
+import Navbar from "./components/Navbar"
+import CurrentWeather from "./components/CurrentWeather"
+import CurrentTime from "./components/CurrentTime";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Navbar/>
+        <main>
+          <h1>City</h1>
+          <section className="current-weather-time">
+            <CurrentTime/>
+            <CurrentWeather/>
+          </section>
+          <hr/>
+
+        </main>
+      </div>
+      
   );
 }
 
