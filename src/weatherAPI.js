@@ -1,25 +1,6 @@
 const apiKey = "#";
 const baseUrl = "https://api.weatherapi.com/v1/current.json";
 
-
-// Function to fetch weather data
-export async function fetchWeather(city) {
-  const url = `${baseUrl}?key=${apiKey}&q=${city}`;
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log(data);
-    return data
-  } catch (error) {
-    console.error('Failed to fetch weather data:', error);
-  };
-};
-
-
 const jsonString = `[
   { "code": 1000, "day": "Sunny", "night": "Clear", "icon": 113 },
   { "code": 1003, "day": "Partly cloudy", "night": "Partly cloudy", "icon": 116 },
@@ -70,6 +51,24 @@ const jsonString = `[
   { "code": 1279, "day": "Patchy light snow with thunder", "night": "Patchy light snow with thunder", "icon": 392 },
   { "code": 1282, "day": "Moderate or heavy snow with thunder", "night": "Moderate or heavy snow with thunder", "icon": 395 }
 ]`;
+
+
+// Function to fetch weather data
+export async function fetchWeather(city) {
+  const url = `${baseUrl}?key=${apiKey}&q=${city}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+    return data
+  } catch (error) {
+    console.error('Failed to fetch weather data:', error);
+  };
+};
 
 const weatherData = JSON.parse(jsonString);
 

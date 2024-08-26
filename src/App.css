@@ -50,6 +50,7 @@
   align-items: center;
 }
 
+/* Nav */
 nav {
   background-color: #233D81;
   font-size: 2rem;
@@ -84,7 +85,47 @@ nav {
   height: 75%;
   padding-left: 7.5%;
 }
+/* !Nav */
 
+
+/* Main */
+main hr {
+  width: 90%;
+  margin: auto;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 100px;
+  background-color: #000;
+  border: none;
+  margin: 0 5px
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 4rem;
+}
+
+/* Clock */
+.current-time h2 {
+  font-weight: 400;
+}
+
+.current-time {
+  min-width: 15rem;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  background-color: #dddcdc60;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* !Clock */
+
+/* Current Weather */
 .tempature {
   display: flex;
   flex-direction: column;
@@ -93,14 +134,6 @@ nav {
 
 .tempature-scale {
   font-size: 0.65em;
-}
-
-.vertical-line {
-  width: 2px;
-  height: 100px;
-  background-color: #000;
-  border: none;
-  margin: 0 5px
 }
 
 .current-weather-container {
@@ -129,12 +162,6 @@ nav {
   font-weight: normal;
 }
 
-main h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 4rem;
-}
-
 .current-weather-time {
   margin: 4rem;
   display: flex;
@@ -142,31 +169,59 @@ main h1 {
   flex-wrap: nowrap;
 }
 
-.current-time h2 {
-  font-weight: 400;
-}
-
-.current-time {
-  min-width: 15rem;
-  padding: 2rem;
-  margin: 2rem;
-  border-radius: 2rem;
-  background-color: #dddcdc60;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .current-weather-container img {
   width: 5rem;
   height: 5rem;
 }
+/* !Current Weather */
 
-main hr {
-  width: 90%;
-  margin: auto;
+/* Weather Forecast */
+.weather-date-overiview-section {
+  background-color: #dddcdc60;
+  width: 100%;
+  margin: 3rem 0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+
 }
 
+.date-weather-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  font-size: 1.15em;
+}
+
+.weather-info-types {
+  width: 85%;
+}
+
+.weather-date {
+  font-size: 1.15em;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather-date img {
+  width: 6rem;
+}
+
+.weather-forecast-section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+/* !Weather Forecast */
+/* !Main */
+
+/* Media Queries */
 @media (max-width: 1000px) {
   .current-weather-section {
     font-size: 0.75rem;
@@ -176,4 +231,4 @@ main hr {
     flex-wrap: wrap;
   }
 }
-
+/* !Media Queries */
